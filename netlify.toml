@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+  # 💡 Add this section
+[dev]
+  # This tells Netlify CLI how to start your local React server
+  command = "npm run dev"
+  # This confirms the port Netlify should look for the React server on
+  targetPort = 3000
