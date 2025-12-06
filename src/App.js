@@ -7,31 +7,7 @@ import MultimangoMarketingInfo from './components/marketingc/MultimangoMarketing
 //const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 function App() {
-  const handlePurchase = async () => {
-    // This Price ID must match the one used in your Netlify function for validation
-   const priceId = process.env.REACT_APP_PDF_PRICE_ID;
-    console.log(priceId);
-
-    // 1. Call your Netlify serverless function
-    const response = await fetch('.netlify/functions/create-checkout', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      // Pass the Price ID to the function to confirm which product is being bought
-      body: JSON.stringify({ priceId: priceId }),
-    });
-    
-    const data = await response.json();
-    console.log(data)
-
-    if (response.ok) {
-      window.location.href = data.url;
-    } else {
-      //console.error('Function error:', session.error);
-      //alert(`Could not initiate payment: ${session.error}`);
-    }
-  };
+ 
 
   return (
     <div className="App">
