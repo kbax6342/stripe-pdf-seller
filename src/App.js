@@ -3,7 +3,7 @@ import { loadStripe } from '@stripe/stripe-js';
 import './App.css'; // Assuming you have a default App.css
 
 // Load your Stripe public key from the environment variables
-const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
+//const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 function App() {
   const handlePurchase = async () => {
