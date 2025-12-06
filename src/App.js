@@ -1,5 +1,5 @@
 import React from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+//import { loadStripe } from '@stripe/stripe-js';
 import './App.css'; // Assuming you have a default App.css
 
 // Load your Stripe public key from the environment variables
