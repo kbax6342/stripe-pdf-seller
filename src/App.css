@@ -36,3 +36,68 @@
     transform: rotate(360deg);
   }
 }
+
+/* --- 1. Global & Container Styles --- */
+.container {
+  background-color: #F7F9FC; /* Light gray/off-white background */
+  min-height: 100vh;
+  padding: 60px 20px;
+  font-family: 'Inter', sans-serif; /* Modern, readable font */
+}
+
+/* --- 2. Header Styles --- */
+.header-section {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.header-section h1 {
+  font-size: 2.5em;
+  color: #1C2833; /* Dark Navy for high contrast */
+  margin-bottom: 10px;
+}
+
+.header-section p {
+  font-size: 1.2em;
+  color: #607D8B; /* Medium Gray */
+}
+
+.logo-text {
+  font-size: 1.8em;
+  color: #FF9800; /* Mango/Orange accent */
+  font-weight: 700;
+}
+
+/* --- 3. Card Container and Layout --- */
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Good for responsiveness */
+}
+
+/* --- 4. Individual Card Styles --- */
+.marketing-card {
+  flex: 1 1 45%; 
+  min-width: 300px;
+  background-color: #FFFFFF; /* White card background */
+  padding: 30px;
+  /* Soft shadow for definition, avoiding hard borders/rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  line-height: 1.6;
+}
+
+.marketing-card h3 {
+  color: #00796B; /* Teal Accent for titles */
+  font-size: 1.4em;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #E0F2F1; /* Subtle divider under the title */
+  margin-bottom: 20px;
+}
+
+.marketing-card p {
+  color: #333333;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 //import { loadStripe } from '@stripe/stripe-js';
 import './App.css'; // Assuming you have a default App.css
+import MultimangoMarketingInfo from './components/marketingc/MultimangoMarketingInfo';
 
 // Load your Stripe public key from the environment variables
 //const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
@@ -35,30 +36,23 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Exclusive PDF Download</h1>
-        <p>Get instant access to our premium digital guide!</p>
+        <h1 style={{ margin: 0, padding: 0 }}>Multimango Begginners Guide PDF</h1>
+        <h2 style={{ margin: 0, padding: 0 }}>Exclusive PDF Download</h2>
+        <p style={{  padding: 0 }}>Get instant access to our premium digital guide!</p>
+        <stripe-buy-button
+  buy-button-id="buy_btn_1SbA6t1jrXLjDwD570JTJ91j"
+  publishable-key="pk_live_51S1pGm1jrXLjDwD5SpGd6HK6z7RRbM3kO2C9V5YsnaSDs0prhJPXcncBqtSWLam7rWksxUUiexnftH2KZChHu7Q600yMMP3QbO"
+>
+</stripe-buy-button>
+        <MultimangoMarketingInfo />
+        <script async
+  src="https://js.stripe.com/v3/buy-button.js">
+</script>
+
+
         
         {/* Replace with your actual product details */}
-        <div className="product-card">
-            <h2>The Essential Guide to Everything</h2>
-            <p>Price: $9.99</p>
-            
-            {/* 
-
-[Image of PDF digital download icon]
- */}
-            
-            <button 
-              className="purchase-button" 
-              onClick={handlePurchase} 
-              disabled={!process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY}
-            >
-              Buy Now
-            </button>
-            {!process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY && (
-              <p style={{ color: 'red' }}>Stripe Public Key is missing. Check your .env file.</p>
-            )}
-        </div>
+      
       </header>
     </div>
   );
