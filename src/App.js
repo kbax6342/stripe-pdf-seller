@@ -12,7 +12,7 @@ function App() {
     console.log(priceId);
 
     // 1. Call your Netlify serverless function
-    const response = await fetch('https://multimango-pdf.app/.netlify/functions/create-checkout', {
+    const response = await fetch('.netlify/functions/create-checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -22,6 +22,7 @@ function App() {
     });
     
     const data = await response.json();
+    console.log(data)
 
     if (response.ok) {
       window.location.href = data.url;
