@@ -1,6 +1,7 @@
 // netlify/functions/create-checkout.js
 
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+console.log("something form this ")
 
 // The base URL of your deployed site
 const siteUrl = process.env.URL || 'http://localhost:8888';
