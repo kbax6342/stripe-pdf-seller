@@ -55,7 +55,7 @@ exports.handler = async (event, context) => {
       }
     });
 
-    //console.log(session.url)
+    console.log(session.url)
 
     return {
       statusCode: 200,
